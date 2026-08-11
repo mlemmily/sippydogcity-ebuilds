@@ -19,4 +19,7 @@ RDEPEND="${DEPEND}"
 src_install() {
     newbin catsnip.lua catsnip
     dodoc docs.md
+    mkdir -p ${D}/usr/share/lua/5.4
+    cp catsnip_patterns.lua ${D}/usr/share/lua/5.4/
+    cp pattern_overrides.lua ${D}/usr/share/lua/5.4/
 }
